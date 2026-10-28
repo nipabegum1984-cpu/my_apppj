@@ -390,7 +390,7 @@
                     </label>
 
                     <label class="flex items-center justify-between p-2.5 bg-rose-50/80 rounded-xl border border-rose-200 cursor-pointer col-span-2 sm:col-span-3">
-                        <span class="font-bold text-rose-800">পিরিয়ড অপশন 🌸 (টিক দিলে অটো ১০০% স্কোর)</span>
+                        <span class="font-bold text-rose-800">পিরিয়ড অপশন 🌷🪷</span>
                         <input type="checkbox" id="ibadat_period" onchange="handlePeriodToggle()" class="w-4 h-4 text-rose-600 rounded">
                     </label>
                 </div>
@@ -424,7 +424,7 @@
                             <i class="fa-solid fa-play"></i> <span>স্টার্ট টাইমার</span>
                         </button>
                         <button onclick="resetExerciseTimer()" class="px-3 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 rounded-xl text-xs font-bold transition-all">
-                            <i class="fa-solid fa-rotate-left"></i> রিচেট
+                            <i class="fa-solid fa-rotate-left"></i> রিসেট 
                         </button>
                     </div>
                     <p id="timerMessage" class="text-[11px] text-gray-500 font-medium">টাইমার ০০:০০ হলে ৩০ মিনিটের এক্সারসাইজ অটোমেটিক টিক হয়ে যাবে!</p>
@@ -490,13 +490,12 @@
                         <input type="checkbox" id="selfcare_laundry" onchange="updateSectionProgress('selfcare')" class="w-4 h-4 theme-accent-text rounded">
                     </label>
                 </div>
-
-                <!-- COLLAPSIBLE HAIR NOTE FEATURE (Independent of Score) -->
-                <div class="border border-purple-200/80 theme-light-bg rounded-2xl overflow-hidden mt-3">
-                    <button onclick="toggleHairNote()" class="w-full p-3 flex justify-between items-center text-xs font-bold theme-accent-text hover:bg-purple-100/30 transition-colors">
+<!-- COLLAPSIBLE HAIR NOTE FEATURE (Independent of Score) -->
+                <div class="border border-purple-200/80 bg-gradient-to-r from-purple-50/40 via-pink-50/30 to-slate-50 rounded-2xl overflow-hidden mt-3">
+                    <button onclick="toggleHairNote()" class="w-full p-3 flex justify-between items-center text-xs font-bold text-accentPrimary hover:bg-purple-100/30 transition-colors">
                         <span class="flex items-center gap-2">
                             <span>💇‍♀️ হেয়ার নোট (Hair Fall Tracker)</span>
-                            <span class="text-[10px] bg-white px-2 py-0.5 rounded-full border border-purple-200 text-gray-500">৩০ দিনের রেকর্ড</span>
+                            <span class="text-[10px] bg-white px-2 py-0.5 rounded-full border border-purple-200 text-textMuted">৩০ দিনের রেকর্ড</span>
                         </span>
                         <div class="flex items-center gap-1 text-[11px]">
                             <span id="hairNoteStateText">ট্যাপ করে ইনপুট দিন</span>
@@ -505,25 +504,26 @@
                     </button>
 
                     <div id="hairNoteContainer" class="hidden p-3.5 border-t border-purple-100 bg-white space-y-3">
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-gray-50 p-2.5 rounded-xl border border-gray-200">
-                            <span id="hairNoteDayLabel" class="text-xs font-bold text-gray-800">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-slate-50 p-2.5 rounded-xl border border-borderSoft">
+                            <span id="hairNoteDayLabel" class="text-xs font-bold text-slate-800">
                                 <!-- Dynamic label: e.g. Oct 28 1 তম দিন বুধবার -->
                             </span>
                             <div class="flex items-center gap-2 w-full sm:w-auto">
-                                <input type="number" id="hairFallInput" min="0" placeholder="চুল পড়ার সংখ্যা" onchange="saveHairNote()" oninput="saveHairNote()" class="w-full sm:w-36 px-3 py-1.5 text-xs border border-gray-200 rounded-lg focus:outline-none focus:border-purple-400 bg-white">
-                                <span class="text-xs text-gray-500 shrink-0">টি চুল</span>
+                                <input type="number" id="hairFallInput" min="0" placeholder="চুল পড়ার সংখ্যা" onchange="saveHairNote()" oninput="saveHairNote()" class="w-full sm:w-36 px-3 py-1.5 text-xs border border-borderSoft rounded-lg focus:outline-none focus:border-accentPrimary bg-white">
+                                <span class="text-xs text-textMuted shrink-0">টি চুল</span>
                             </div>
                         </div>
 
                         <!-- 30-Day Hair Fall Log List -->
                         <div class="space-y-1.5">
-                            <span class="text-[11px] font-bold text-gray-500 block">৩০ দিনের চুল পড়ার হিস্ট্রি:</span>
-                            <div id="hairFallLogGrid" class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 text-[10px] max-h-40 overflow-y-auto p-1 border border-gray-200 rounded-xl bg-gray-50/50">
+                            <span class="text-[11px] font-bold text-textMuted block">৩০ দিনের চুল পড়ার হিস্ট্রি:</span>
+                            <div id="hairFallLogGrid" class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 text-[10px] max-h-40 overflow-y-auto p-1 border border-borderSoft rounded-xl bg-slate-50/50">
                                 <!-- JS Populated Hair Fall Record Cards -->
                             </div>
                         </div>
                     </div>
                 </div>
+                
 
                 <div class="pt-2 border-t border-gray-100">
                     <h4 class="text-xs font-bold mb-2">সেলফ কেয়ার সেকশন - ৩০ দিনের ট্র্যাকিং হিস্ট্রি:</h4>
